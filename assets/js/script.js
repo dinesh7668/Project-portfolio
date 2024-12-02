@@ -1,6 +1,6 @@
 'use strict';
 
-let password = 1432560;
+let password = "password";
 let userNum = prompt("Enter Password ");
 while (userNum != password) {
     userNum = prompt("Wrong Password, Try again or contact Dinesh to get password: ");
