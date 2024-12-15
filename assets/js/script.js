@@ -1,10 +1,10 @@
 'use strict';
 
-let password = "password";
-let userNum = prompt("Enter Password ");
-while (userNum != password) {
-    userNum = prompt("Wrong Password, Try again or contact Dinesh to get password: ");
-}
+// let password = "password";
+// let userNum = prompt("Enter Password ");
+// while (userNum != password) {
+//     userNum = prompt("Wrong Password, Try again or contact Dinesh to get password: ");
+// }
 alert("Thank you for visiting! Our website is currently undergoing updates and will be improved as soon as possible. Please check back soon for the latest updates.     -- Dinesh");
 
 // element toggle function
