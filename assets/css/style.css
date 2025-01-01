@@ -433,18 +433,25 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 15px;
+  margin-top: 2rem;
+  gap: 1.5rem;
   padding-bottom: 4px;
   padding-left: 7px;
 }
 
 .social-item .social-link {
-  color: var(--light-gray-70);
-  font-size: 18px;
+  color: aqua;
+  font-size: 30px;
+  transition: 0.5s ease-in-out;
 }
 
 
-.social-item .social-link:hover { color: var(--light-gray); }
+.social-item .social-link:hover {
+   color: var(--orange-yellow-crayola);
+   transform: translateY(-30%);
+   box-shadow: 0rem 0rem 2rem aqua;
+   border-radius: 50px;
+   }
 
 
 
