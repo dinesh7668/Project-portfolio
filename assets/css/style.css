@@ -433,10 +433,10 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   gap: 1.5rem;
-  padding-bottom: 4px;
-  padding-left: 7px;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
 }
 
 .social-item .social-link {
