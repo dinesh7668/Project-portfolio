@@ -450,9 +450,8 @@ main {
 
 
 .social-item .social-link:hover {
-   color: var(--orange-yellow-crayol);
-   transform: translateY(-30%);
-   box-shadow: 0rem 0rem 2rem aqua;
+   transform: scale(0.2);
+   box-shadow: 0rem 0rem 2rem orange;
    border-radius: 50px;
    }
 
