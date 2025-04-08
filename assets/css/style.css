@@ -450,7 +450,7 @@ main {
 
 
 .social-item .social-link:hover {
-   transform: scale(0.2);
+/*    transform: scale(0.2); */
    box-shadow: 0rem 0rem 2rem orange;
    border-radius: 50px;
    }
