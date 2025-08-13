@@ -1,7 +1,4 @@
 'use strict';
-
-alert("Thank you for visiting! Our website is currently undergoing updates and will be improved as soon as possible. Please check back soon for the latest updates.     -- Dinesh");
-
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
