@@ -338,6 +338,9 @@ main {
   border-radius: 20px;
   margin-top: 0.5rem;
 }
+.avatar-box .pcimg{
+  margin-bottom: 0.4rem;
+}
 
 .info-content .name {
   color: var(--white-2);
