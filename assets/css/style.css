@@ -340,8 +340,18 @@ main {
 }
 .avatar-box .pcimg{
   margin-bottom: 0.3rem;
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  display: block;
+  border-radius: 50%;
 }
 
+@media (max-width: 600px) {
+  .avatar-box .pcimg {
+    max-width: 80px;
+  }
+}
 .info-content .name {
   color: var(--white-2);
   font-size: var(--fs-3);
