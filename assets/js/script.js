@@ -112,6 +112,50 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 
+// certificate modal variables
+const certificateTriggers = document.querySelectorAll("[data-certificate-trigger]");
+const certificateModal = document.querySelector("[data-certificate-modal]");
+const certificateOverlay = document.querySelector("[data-certificate-overlay]");
+const certificateCloseBtn = document.querySelector("[data-certificate-close]");
+const certificateModalImage = document.querySelector("[data-certificate-modal-image]");
+const certificateModalTitle = document.querySelector("[data-certificate-modal-title]");
+
+const closeCertificateModal = function () {
+  if (!certificateModal) return;
+
+  certificateModal.classList.remove("active");
+}
+
+const openCertificateModal = function (trigger) {
+  if (!certificateModal) return;
+
+  certificateModalImage.src = trigger.dataset.certificateImage;
+  certificateModalImage.alt = trigger.dataset.certificateAlt;
+  certificateModalTitle.innerHTML = trigger.dataset.certificateTitle;
+  certificateModal.classList.add("active");
+}
+
+for (let i = 0; i < certificateTriggers.length; i++) {
+  certificateTriggers[i].addEventListener("click", function () {
+    openCertificateModal(this);
+  });
+}
+
+if (certificateCloseBtn) {
+  certificateCloseBtn.addEventListener("click", closeCertificateModal);
+}
+
+if (certificateOverlay) {
+  certificateOverlay.addEventListener("click", closeCertificateModal);
+}
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeCertificateModal();
+  }
+});
+
+
 // contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
@@ -136,21 +180,46 @@ for (let i = 0; i < formInputs.length; i++) {
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
+const setActivePage = function (pageName, shouldScroll = true, shouldUpdateHash = true) {
+  let matchedPage = false;
+
+  for (let i = 0; i < pages.length; i++) {
+    const isActivePage = pages[i].dataset.page === pageName;
+    const isActiveLink = navigationLinks[i].innerHTML.toLowerCase() === pageName;
+
+    pages[i].classList.toggle("active", isActivePage);
+    navigationLinks[i].classList.toggle("active", isActiveLink);
+
+    if (isActivePage) {
+      matchedPage = true;
+    }
+  }
+
+  if (!matchedPage) return;
+
+  if (shouldUpdateHash) {
+    window.location.hash = pageName;
+  }
+
+  if (shouldScroll) {
+    window.scrollTo(0, 0);
+  }
+}
+
+const initialPage = window.location.hash
+  ? window.location.hash.substring(1).toLowerCase()
+  : "about";
+
+setActivePage(initialPage, false, false);
+
+window.addEventListener("hashchange", function () {
+  const hashedPage = window.location.hash.substring(1).toLowerCase();
+  setActivePage(hashedPage || "about", false, false);
+});
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-
+    setActivePage(this.innerHTML.toLowerCase());
   });
 }
