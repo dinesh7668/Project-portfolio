@@ -1,27 +1,8 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
 
-
-/**
- * copyright 2024 @dinesh
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
 
-  /**
-   * colors
-   */
 
-  /* gradient */
 
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
@@ -69,9 +50,6 @@
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
-  /**
-   * typography
-   */
 
   /* font-family */
   --ff-poppins: 'Poppins', sans-serif;
@@ -302,6 +280,7 @@ article.active {
 
 main {
   margin: 0 12px;
+  padding-top: 16px;
   padding-bottom: 60px;
   min-width: 259px;
 }
@@ -984,7 +963,18 @@ main {
   100% { transform: scale(1); }
 }
 
-.project-item > a { width: 100%; }
+.project-item > a,
+.certificate-card {
+  width: 100%;
+}
+
+.certificate-card {
+  display: block;
+  text-align: left;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
 
 .project-img {
   position: relative;
@@ -1007,7 +997,11 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
+.project-item > a:hover .project-img::before,
+.certificate-card:hover .project-img::before,
+.certificate-card:focus-visible .project-img::before {
+  background: hsla(0, 0%, 0%, 0.5);
+}
 
 .project-item-icon-box {
   --scale: 0.8;
@@ -1026,7 +1020,9 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover .project-item-icon-box {
+.project-item > a:hover .project-item-icon-box,
+.certificate-card:hover .project-item-icon-box,
+.certificate-card:focus-visible .project-item-icon-box {
   --scale: 1;
   opacity: 1;
 }
@@ -1040,7 +1036,11 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover img { transform: scale(1.1); }
+.project-item > a:hover img,
+.certificate-card:hover img,
+.certificate-card:focus-visible img {
+  transform: scale(1.1);
+}
 
 .project-title,
 .project-category { margin-left: 10px; }
@@ -1057,6 +1057,71 @@ main {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
+}
+
+.certificates-intro {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.certificate-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 12px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 30;
+  transition: var(--transition-1);
+}
+
+.certificate-modal.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.certificate-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: hsla(0, 0%, 5%, 0.85);
+}
+
+.certificate-modal-content {
+  position: relative;
+  width: min(100%, 920px);
+  max-height: calc(100vh - 40px);
+  overflow: auto;
+  padding: 22px;
+  border: 1px solid var(--jet);
+  border-radius: 18px;
+  background: var(--eerie-black-2);
+  box-shadow: var(--shadow-5);
+  z-index: 1;
+}
+
+.certificate-modal-title {
+  margin-bottom: 18px;
+  padding-right: 42px;
+}
+
+.certificate-modal-figure {
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--smoky-black);
+}
+
+.certificate-modal-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 
