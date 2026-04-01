@@ -373,8 +373,19 @@ main {
 }
 
 @media (max-width: 600px) {
+  .sidebar {
+    max-height: 128px;
+    padding-bottom: 14px;
+  }
+
+  .sidebar-info {
+    min-height: 96px;
+    align-items: center;
+  }
+
   .avatar-box {
     width: 88px;
+    margin-top: 0;
   }
 
   .avatar-box .pcimg {
