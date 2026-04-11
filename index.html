@@ -995,153 +995,147 @@
         <!-- #CERTIFICATE -->
 
   
-<article class="certificates" data-page="certificates">
-  <header>
-    <h2 class="h2 article-title">Certificates</h2>
-  </header>
+ <article class="certificates" data-page="certificates">
+          <header>
+            <h2 class="h2 article-title">Certificates</h2>
+          </header>
 
-  <section class="certificates-section">
-    <p class="certificates-intro">
-      Tap any card to open a larger preview.
-    </p>
+          <section class="certificates-section">
+            <p class="certificates-intro">
+              Tap any card to open a larger preview.
+            </p>
 
-    <ul class="project-list certificate-list">
+            <ul class="project-list certificate-list">
+              <li class="project-item active certificate-item">
+                <button
+                  class="certificate-card"
+                  type="button"
+                  data-certificate-trigger
+                  data-certificate-title="Frontend Developer React Certificate"
+                  data-certificate-image="./assets/certificates/frontend_developer_react certificate.jpg"
+                  data-certificate-alt="Frontend Developer React certificate"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-      <!-- React Certificate -->
-      <li class="project-item active certificate-item">
-        <button
-          class="certificate-card"
-          type="button"
-          data-certificate-trigger
-          data-certificate-title="Frontend Developer React Certificate"
-          data-certificate-image="./assets/certificates/frontend_developer_react certificate.jpg"
-          data-certificate-alt="Frontend Developer React certificate"
-        >
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
+                    <img
+                      src="./assets/certificates/frontend_developer_react certificate.jpg"
+                      alt="Frontend Developer React certificate"
+                      loading="lazy"
+                    />
+                  </figure>
 
+                  <h3 class="project-title">
+                    Frontend Developer React Certificate
+                  </h3>
 
+                  <p class="project-category">Certificate from HackerRank</p></p>
+                       
+                </button>
+              </li>
 
+               <li class="project-item active certificate-item">
+                <button
+                  class="certificate-card"
+                  type="button"
+                  data-certificate-trigger
+                  data-certificate-title="ICMRI Attendy Certificate"
+                  data-certificate-image="./assets/certificates/ICMRI_Certificate.jpeg"
+                  data-certificate-alt="ICMRI Attendy Certificate"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
+                    <img
+                      src="./assets/certificates/ICMRI_Certificate.jpeg"
+                      alt="Attended ICMRI conference in Future University"
+                      loading="lazy"
+                    />
+                  </figure>
 
+                  <h3 class="project-title">
+                    ICMRI Participation Certificate
+                  </h3>
 
+                  <p class="project-category">Certificate from Future University</p></p>
+                       
+                </button>
+              </li>
 
+               <li class="project-item active certificate-item">
+                <button
+                  class="certificate-card"
+                  type="button"
+                  data-certificate-trigger
+                  data-certificate-title="SQL Intermediate Certificate"
+                  data-certificate-image="./assets/certificates/sql_intermediate_certificate.png"
+                  data-certificate-alt="SQL Intermediate Certificate"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-            <img
-              src="./assets/certificates/frontend_developer_react certificate.jpg"
-              alt="Frontend Developer React certificate"
-              loading="lazy"
-            />
-          </figure>
+                    <img
+                      src="./assets/certificates/sql_intermediate_certificate.png"
+                      alt="SQL Intermediate Certificate"
+                      loading="lazy"
+                    />
+                  </figure>
 
-          <h3 class="project-title">
-            Frontend Developer React Certificate
-          </h3>
+                  <h3 class="project-title">
+                    SQL Intermediate Certificate
+                  </h3>
 
-          <p class="project-category">Certificate from HackerRank</p>
-        </button>
-      </li>
+                  <p class="project-category">Certificate from HackerRank </p></p>
+                       
+                </button>
+              </li>
+              
+            </ul>
+          </section>
+        </article>
 
-      <!-- ICMRI Certificate -->
-      <li class="project-item active certificate-item">
-        <button
-          class="certificate-card"
-          type="button"
-          data-certificate-trigger
-          data-certificate-title="ICMRI Participation Certificate"
-          data-certificate-image="./assets/certificates/ICMRI_Certificate.jpeg"
-          data-certificate-alt="ICMRI Certificate"
-        >
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
+        <div class="certificate-modal" data-certificate-modal>
+          <div class="certificate-modal-overlay" data-certificate-overlay></div>
 
-            <img
-              src="./assets/certificates/ICMRI_Certificate.jpeg"
-              alt="ICMRI Certificate"
-              loading="lazy"
-            />
-          </figure>
+          <section
+            class="certificate-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="certificate-modal-title"
+          >
+            <button
+              class="modal-close-btn"
+              type="button"
+              aria-label="Close certificate preview"
+              data-certificate-close
+            >
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
 
-          <h3 class="project-title">
-            ICMRI Participation Certificate
-          </h3>
+            <h3
+              class="h3 certificate-modal-title"
+              id="certificate-modal-title"
+              data-certificate-modal-title
+            >
+              Certificate Preview
+            </h3>
 
-          <p class="project-category">Certificate from Future University</p>
-        </button>
-      </li>
-
-      <!-- AI Skill Certificate -->
-      <li class="project-item active certificate-item">
-        <button
-          class="certificate-card"
-          type="button"
-          data-certificate-trigger
-          data-certificate-title="AI Skill Passout Certificate"
-          data-certificate-image="./assets/certificates/AI _skill_passout_cert.png"
-          data-certificate-alt="AI Skill Certificate"
-        >
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-
-            <img
-              src="./assets/certificates/AI _skill_passout_cert.png"
-              alt="AI Skill Certificate"
-              loading="lazy"
-            />
-          </figure>
-
-          <h3 class="project-title">
-            AI Skill Passout Certificate
-          </h3>
-
-          <p class="project-category">Certificate from Future University</p>
-        </button>
-      </li>
-
-      <!-- SQL Certificate -->
-      <li class="project-item active certificate-item">
-        <button
-          class="certificate-card"
-          type="button"
-          data-certificate-trigger
-          data-certificate-title="SQL Intermediate Certificate"
-          data-certificate-image="./assets/certificates/sql_intermediate_certificate.png"
-          data-certificate-alt="SQL Certificate"
-        >
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-
-            <img
-              src="./assets/certificates/sql_intermediate_certificate.png"
-              alt="SQL Certificate"
-              loading="lazy"
-            />
-          </figure>
-
-          <h3 class="project-title">
-            SQL Intermediate Certificate
-          </h3>
-
-          <p class="project-category">Certificate from HackerRank</p>
-        </button>
-      </li>
-
-
-
-
-
-
-    </ul>
-  </section>
-</article>
+            <figure class="certificate-modal-figure">
+              <img
+                src=""
+                alt=""
+                loading="lazy"
+                data-certificate-modal-image
+              />
+            </figure>
+          </section>
+        </div>
 
         <!--
         - #CONTACT
